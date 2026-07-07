@@ -1,156 +1,107 @@
-<section class="py-20 bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-gray-950 dark:via-slate-900 dark:to-indigo-950" id="about" dir="rtl">
-  <div class="max-w-6xl mx-auto px-6">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محدثه علی‌مرادی اطاقور | روان‌شناس و مشاور خانواده</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: 'Tahoma', 'Vazirmatn', system-ui, sans-serif; }
+    .lang-btn.active { background-color: #4F46E5; color: white; }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200">
 
-    <!-- هدر معرفی -->
-    <div class="text-center mb-16">
-      <div class="inline-flex items-center justify-center w-32 h-32 mx-auto mb-6 bg-white rounded-3xl shadow-xl overflow-hidden border-8 border-white">
-        <img src="https://via.placeholder.com/400x400/6366F1/FFFFFF?text=MA" 
-             alt="محدثه علی‌مرادی اطاقور" 
-             class="w-full h-full object-cover">
+  <!-- بخش معرفی -->
+  <section class="py-20 bg-gradient-to-br from-slate-50 via-white to-indigo-50">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <div class="w-40 h-40 mx-auto mb-6 rounded-3xl overflow-hidden border-8 border-white shadow-2xl">
+          <img src="https://via.placeholder.com/400x400/4F46E5/white?text=MA" alt="محدثه علی‌مرادی" class="w-full h-full object-cover">
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold mb-3">محدثه علی‌مرادی اطاقور</h1>
+        <p class="text-2xl text-indigo-600">مشاور خانواده • روان‌شناس بالینی • پژوهشگر</p>
       </div>
-      
-      <h1 class="text-5xl md:text-6xl font-bold text-slate-800 dark:text-white mb-3">محدثه علی‌مرادی اطاقور</h1>
-      <p class="text-2xl text-indigo-600 dark:text-indigo-400 font-medium">مشاور خانواده، روان‌شناس بالینی و پژوهشگر</p>
-    </div>
 
-    <!-- سوییچ زبان -->
-    <div class="flex justify-center mb-12">
-      <div class="bg-white dark:bg-slate-800 shadow-md rounded-3xl p-1 flex">
-        <button onclick="switchLang('fa')" id="btn-fa" 
-          class="lang-btn px-8 py-3 rounded-3xl font-medium active">🇮🇷 فارسی</button>
-        <button onclick="switchLang('en')" id="btn-en" 
-          class="lang-btn px-8 py-3 rounded-3xl font-medium">🇬🇧 English</button>
+      <!-- سوییچ زبان -->
+      <div class="flex justify-center mb-12">
+        <div class="bg-white shadow rounded-3xl p-1 inline-flex">
+          <button onclick="switchLang('fa')" id="btn-fa" class="lang-btn px-8 py-3 rounded-3xl font-medium active">🇮🇷 فارسی</button>
+          <button onclick="switchLang('en')" id="btn-en" class="lang-btn px-8 py-3 rounded-3xl font-medium">🇬🇧 English</button>
+        </div>
       </div>
-    </div>
 
-    <!-- محتوای فارسی -->
-    <div id="content-fa" class="lang-content">
-      <div class="grid md:grid-cols-12 gap-12 items-start">
-        
-        <!-- ستون اصلی -->
-        <div class="md:col-span-7 space-y-12">
-          <div class="bg-white dark:bg-slate-800 rounded-3xl p-10 shadow-sm">
-            <h2 class="text-3xl font-semibold mb-6 text-slate-800 dark:text-white">درباره من</h2>
-            <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-              مدرس دانشگاه و روان‌شناس با تمرکز بر زوج‌درمانی و خانواده‌درمانی. دارای انتشارات بین‌المللی و تجربه برگزاری بیش از ۱۰ کارگاه تخصصی در سراسر کشور.
-            </p>
-          </div>
+      <!-- فارسی -->
+      <div id="content-fa" class="lang-content">
+        <div class="grid md:grid-cols-12 gap-12">
+          <div class="md:col-span-7 space-y-10">
+            <div class="bg-white rounded-3xl p-10 shadow">
+              <h2 class="text-3xl font-semibold mb-5">درباره من</h2>
+              <p class="text-lg leading-relaxed">مدرس دانشگاه و روان‌شناس با تمرکز بر زوج‌درمانی و خانواده‌درمانی. دارای انتشارات بین‌المللی و تجربه برگزاری بیش از ۱۰ کارگاه تخصصی.</p>
+            </div>
 
-          <div class="bg-white dark:bg-slate-800 rounded-3xl p-10 shadow-sm">
-            <h2 class="text-3xl font-semibold mb-8 text-slate-800 dark:text-white">زمینه‌های تخصصی</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="bg-indigo-50 dark:bg-indigo-900/30 p-6 rounded-2xl">زوج‌درمانی</div>
-              <div class="bg-indigo-50 dark:bg-indigo-900/30 p-6 rounded-2xl">خانواده‌درمانی سیستمی</div>
-              <div class="bg-indigo-50 dark:bg-indigo-900/30 p-6 rounded-2xl">درمان شناختی-هیجانی-رفتاری (REBT)</div>
-              <div class="bg-indigo-50 dark:bg-indigo-900/30 p-6 rounded-2xl">درمان مبتنی بر روایت</div>
-              <div class="bg-indigo-50 dark:bg-indigo-900/30 p-6 rounded-2xl">مشاوره پیش از ازدواج</div>
-              <div class="bg-indigo-50 dark:bg-indigo-900/30 p-6 rounded-2xl">مشاوره پس از خیانت و بحران</div>
+            <div class="bg-white rounded-3xl p-10 shadow">
+              <h2 class="text-3xl font-semibold mb-8">زمینه‌های تخصصی</h2>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-indigo-50 p-6 rounded-2xl">زوج‌درمانی</div>
+                <div class="bg-indigo-50 p-6 rounded-2xl">خانواده‌درمانی</div>
+                <div class="bg-indigo-50 p-6 rounded-2xl">درمان REBT</div>
+                <div class="bg-indigo-50 p-6 rounded-2xl">مشاوره پیش از ازدواج</div>
+                <div class="bg-indigo-50 p-6 rounded-2xl">درمان مبتنی بر روایت</div>
+                <div class="bg-indigo-50 p-6 rounded-2xl">مداخله در بحران</div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- ستون کناری -->
-        <div class="md:col-span-5 space-y-12">
-          <div class="bg-white dark:bg-slate-800 rounded-3xl p-10 shadow-sm">
-            <h2 class="text-3xl font-semibold mb-8 text-slate-800 dark:text-white">تحصیلات و افتخارات</h2>
-            <ul class="space-y-6 text-slate-600 dark:text-slate-300">
-              <li class="flex gap-4">
-                <span class="text-2xl text-indigo-500">•</span>
-                <span>کارشناسی ارشد مشاوره خانواده، دانشگاه خوارزمی تهران</span>
-              </li>
-              <li class="flex gap-4">
-                <span class="text-2xl text-indigo-500">•</span>
-                <span>عضو انجمن روان‌شناسی آمریکا (APA)</span>
-              </li>
-              <li class="flex gap-4">
-                <span class="text-2xl text-indigo-500">•</span>
-                <span>عضو بنیاد ملی نخبگان</span>
-              </li>
-              <li class="flex gap-4">
-                <span class="text-2xl text-indigo-500">•</span>
-                <span>داور مجله Current Psychology (JCR Q1)</span>
-              </li>
-              <li class="flex gap-4">
-                <span class="text-2xl text-indigo-500">•</span>
-                <span>رتبه اول شعر در دو جشنواره فرهنگی کشوری</span>
-              </li>
-            </ul>
-          </div>
+          <div class="md:col-span-5 space-y-10">
+            <div class="bg-white rounded-3xl p-10 shadow">
+              <h2 class="text-3xl font-semibold mb-8">تحصیلات و افتخارات</h2>
+              <ul class="space-y-5">
+                <li>✅ کارشناسی ارشد مشاوره خانواده، دانشگاه خوارزمی</li>
+                <li>✅ عضو انجمن روان‌شناسی آمریکا (APA)</li>
+                <li>✅ عضو بنیاد ملی نخبگان</li>
+                <li>✅ داور مجله Current Psychology (JCR Q1)</li>
+              </ul>
+            </div>
 
-          <!-- مقالات -->
-          <div class="bg-white dark:bg-slate-800 rounded-3xl p-10 shadow-sm">
-            <h2 class="text-3xl font-semibold mb-8 text-slate-800 dark:text-white">پژوهش‌ها و مقالات</h2>
-            <div class="space-y-8">
-              <div>
-                <p class="font-medium leading-relaxed">Navigating Digital Disconnection: A Quasi-Experimental Evaluation of Systemic Family Therapy...</p>
-                <p class="text-sm text-indigo-600 mt-2">DOI: 10.1007/s10615-026-01027-x</p>
-              </div>
-              <div>
-                <p class="font-medium leading-relaxed">An Analysis of Women's Lived Experience of Their Husbands' Emotional Support in Crisis Situations</p>
-                <p class="text-sm text-indigo-600 mt-2">DOI: 10.1080/01926187.2026.2631372</p>
+            <div class="bg-white rounded-3xl p-10 shadow">
+              <h2 class="text-3xl font-semibold mb-6">پژوهش‌ها</h2>
+              <div class="space-y-6 text-sm">
+                <div>
+                  <p class="font-medium">Navigating Digital Disconnection...</p>
+                  <p class="text-indigo-600">DOI: 10.1007/s10615-026-01027-x</p>
+                </div>
+                <div>
+                  <p class="font-medium">An Analysis of Women's Lived Experience...</p>
+                  <p class="text-indigo-600">DOI: 10.1080/01926187.2026.2631372</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- محتوای انگلیسی -->
-    <div id="content-en" class="lang-content hidden">
-      <!-- محتوای انگلیسی مشابه (برای صرفه‌جویی در فضا، مشابه فارسی است) -->
-      <div class="grid md:grid-cols-12 gap-12 items-start">
-        <div class="md:col-span-7 space-y-12">
-          <div class="bg-white dark:bg-slate-800 rounded-3xl p-10 shadow-sm">
-            <h2 class="text-3xl font-semibold mb-6">About Me</h2>
-            <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-              University lecturer and clinical psychologist specializing in couples and family therapy with international publications.
-            </p>
-          </div>
-          <!-- بقیه بخش‌ها مشابه ... -->
+      <!-- اطلاعات تماس -->
+      <div class="mt-20 bg-white rounded-3xl p-12 shadow text-center">
+        <h2 class="text-3xl font-semibold mb-8">اطلاعات تماس</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>مرکز مشاوره راستین<br>قزوین، فردوسی جنوبی، پلاک ۸۶</div>
+          <div>تلفن: ۰۲۸-۳۳۲۲۳۸۱۴<br>همراه: ۰۹۳۰۴۲۴۴۸۲۹</div>
+          <div>ایمیل: mohaddesehalimoradi200088@gmail.com</div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- اطلاعات تماس -->
-    <div class="mt-20 bg-white dark:bg-slate-800 rounded-3xl p-10 shadow-sm">
-      <h2 class="text-3xl font-semibold text-center mb-10 text-slate-800 dark:text-white">اطلاعات تماس</h2>
-      <div class="grid md:grid-cols-3 gap-10 text-center">
-        <div>
-          <p class="text-indigo-600 font-semibold">مرکز مشاوره راستین</p>
-          <p class="mt-4 text-slate-600 dark:text-slate-400">قزوین، فردوسی جنوبی، روبه‌روی خیابان شهرداری، پلاک ۸۶، طبقه اول، واحد ۴</p>
-        </div>
-        <div>
-          <p class="text-indigo-600 font-semibold">تلفن ثابت</p>
-          <p class="text-3xl mt-2">۰۲۸-۳۳۲۲۳۸۱۴</p>
-          <p class="text-indigo-600 font-semibold mt-6">همراه</p>
-          <p class="text-3xl">۰۹۳۰۴۲۴۴۸۲۹</p>
-        </div>
-        <div>
-          <p class="text-indigo-600 font-semibold">ایمیل</p>
-          <a href="mailto:mohaddesehalimoradi200088@gmail.com" class="block mt-3 hover:text-indigo-700">mohaddesehalimoradi200088@gmail.com</a>
-          <a href="https://www.linkedin.com/in/mohaddeseh-alimoradi-otaghvar-182070348" target="_blank" class="mt-8 block text-indigo-600 hover:underline">LinkedIn Profile</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- اسکریپت تغییر زبان -->
-<script>
-function switchLang(lang) {
-  document.querySelectorAll('.lang-content').forEach(el => el.classList.add('hidden'));
-  document.getElementById(`content-${lang}`).classList.remove('hidden');
-  
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active', 'bg-indigo-600', 'text-white'));
-  document.getElementById(`btn-${lang}`).classList.add('active', 'bg-indigo-600', 'text-white');
-}
-</script>
-
-<style>
-.lang-btn {
-  transition: all 0.3s ease;
-}
-.lang-btn.active {
-  box-shadow: 0 10px 15px -3px rgb(99 102 241 / 0.3);
-}
-</style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-content').forEach(el => el.classList.add('hidden'));
+      document.getElementById(`content-${lang}`).classList.remove('hidden');
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(`btn-${lang}`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
