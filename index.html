@@ -3,115 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>محدثه علی مرادی اطاقور</title>
+  <title>محدثه علی‌مرادی اطاقور</title>
   <style>
     body {
       font-family: 'Tahoma', 'Vazirmatn', system-ui, sans-serif;
-      background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+      background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #f3e8ff 100%);
       min-height: 100vh;
       margin: 0;
+      color: #1e2937;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 60px 20px;
     }
     .card {
-      background: white;
-      border-radius: 24px;
-      box-shadow: 0 15px 35px rgba(67, 56, 202, 0.12);
-      padding: 45px;
-      margin-bottom: 35px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 28px;
+      box-shadow: 0 20px 40px rgba(67, 56, 202, 0.1);
+      padding: 48px;
+      margin-bottom: 40px;
       border: 1px solid #e0e7ff;
     }
-    h1 { color: #1e2937; letter-spacing: -0.02em; }
-    h2 { color: #4338ca; }
-    .highlight { 
-      background: #eef2ff; 
+    h1 {
+      font-size: 58px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 24px;
+      color: #4338ca;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 30px;
+      color: #4338ca;
+      text-align: center;
+      margin-bottom: 32px;
+      position: relative;
+    }
+    h2:after {
+      content: '';
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(to right, #6366f1, #a5b4fc);
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 3px;
+    }
+    .highlight {
+      background: #eef2ff;
+      padding: 24px;
+      border-radius: 20px;
       transition: all 0.3s ease;
     }
-    .highlight:hover { background: #e0e7ff; transform: translateY(-2px); }
+    .highlight:hover {
+      background: #e0e7ff;
+      transform: translateY(-4px);
+    }
+    .lang-btn {
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 2px solid #6366f1;
+    }
   </style>
 </head>
 <body>
 
-  <div style="max-width: 1100px; margin: 0 auto; padding: 50px 20px;">
+  <div class="container">
 
-    <!-- Header -->
-    <div style="text-align: center; margin-bottom: 60px;">
-      <h1 style="font-size: 56px; font-weight: 700; margin: 0 0 12px 0;">محدثه علی‌مرادی اطاقور</h1>
-      <p style="font-size: 24px; color: #4338ca; margin: 0; font-weight: 500;">مشاور خانواده، روان‌شناس بالینی و پژوهشگر</p>
+    <!-- Language Toggle -->
+    <div style="text-align: center; margin-bottom: 30px;">
+      <button onclick="switchLang('fa')" id="btn-fa" 
+        class="lang-btn" style="background:#4338ca; color:white; margin: 0 8px;">🇮🇷 فارسی</button>
+      <button onclick="switchLang('en')" id="btn-en" 
+        class="lang-btn" style="background:white; color:#4338ca;">🇬🇧 English</button>
     </div>
 
-    <!-- معرفی -->
-    <div class="card">
-      <h2 style="font-size: 29px; text-align: center; margin-bottom: 30px;">معرفی</h2>
-      <div style="font-size: 20px; line-height: 2.1; text-align: center; color: #1e2937; font-weight: 600;">
-        <p>مدرس دانشگاه</p>
-        <p>روان‌شناس مرکز مشاوره راستین</p>
-        <p>زوج‌درمانگر و خانواده‌درمانگر</p>
-        <p>پژوهشگر با انتشارات بین‌المللی</p>
-        <p>برگزارکننده بیش از ۱۰ کارگاه تخصصی در سراسر ایران</p>
+    <!-- فارسی -->
+    <div id="content-fa">
+
+      <!-- Header -->
+      <div style="text-align: center; margin-bottom: 70px;">
+        <h1>محدثه علی‌مرادی اطاقور</h1>
+        <p class="subtitle">مشاور خانواده، روان‌شناس بالینی و پژوهشگر</p>
       </div>
-    </div>
 
-    <!-- زمینه‌های تخصصی -->
-    <div class="card">
-      <h2 style="font-size: 29px; text-align: center; margin-bottom: 30px;">زمینه‌های تخصصی</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;">
-        <div class="highlight" style="padding: 22px; border-radius: 18px; text-align: center; font-size: 18px;">زوج‌درمانی</div>
-        <div class="highlight" style="padding: 22px; border-radius: 18px; text-align: center; font-size: 18px;">خانواده‌درمانی</div>
-        <div class="highlight" style="padding: 22px; border-radius: 18px; text-align: center; font-size: 18px;">درمان شناختی-هیجانی-رفتاری (REBT)</div>
-        <div class="highlight" style="padding: 22px; border-radius: 18px; text-align: center; font-size: 18px;">مشاوره پیش از ازدواج</div>
-        <div class="highlight" style="padding: 22px; border-radius: 18px; text-align: center; font-size: 18px;">مشاوره تحصیلی</div>
-        <div class="highlight" style="padding: 22px; border-radius: 18px; text-align: center; font-size: 18px;">مداخله در بحران</div>
+      <!-- معرفی -->
+      <div class="card">
+        <h2>معرفی</h2>
+        <div style="font-size: 20px; line-height: 2.2; text-align: center; font-weight: 600;">
+          <p>مدرس دانشگاه</p>
+          <p>روان‌شناس مرکز مشاوره راستین</p>
+          <p>زوج‌درمانگر و خانواده‌درمانگر</p>
+          <p>پژوهشگر با انتشارات بین‌المللی</p>
+          <p>برگزارکننده بیش از ۱۰ کارگاه تخصصی در سراسر ایران</p>
+        </div>
       </div>
-    </div>
 
-    <!-- تحصیلات و افتخارات -->
-    <div class="card">
-      <h2 style="font-size: 29px; text-align: center; margin-bottom: 30px;">تحصیلات و افتخارات</h2>
-      <ul style="font-size: 19.5px; line-height: 2.3; color: #334155; padding-right: 20px;">
-        <li>کارشناسی ارشد مشاوره خانواده، دانشگاه خوارزمی تهران</li>
-        <li>عضو انجمن روان‌شناسی آمریکا (APA)</li>
-        <li>عضو بنیاد ملی نخبگان</li>
-        <li>داور مجله Current Psychology (JCR Q1)</li>
-        <li>رتبه اول شعر در دو دوره جشنواره فرهنگی کشوری</li>
-      </ul>
-    </div>
+      <!-- زمینه‌های تخصصی -->
+      <div class="card">
+        <h2>زمینه‌های تخصصی</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+          <div class="highlight" style="text-align:center; font-size:18px;">زوج‌درمانی</div>
+          <div class="highlight" style="text-align:center; font-size:18px;">خانواده‌درمانی</div>
+          <div class="highlight" style="text-align:center; font-size:18px;">درمان شناختی-هیجانی-رفتاری (REBT)</div>
+          <div class="highlight" style="text-align:center; font-size:18px;">مشاوره پیش از ازدواج</div>
+          <div class="highlight" style="text-align:center; font-size:18px;">مشاوره تحصیلی</div>
+          <div class="highlight" style="text-align:center; font-size:18px;">مداخله در بحران</div>
+        </div>
+      </div>
 
-    <!-- پژوهش‌ها -->
-    <div class="card">
-      <h2 style="font-size: 29px; text-align: center; margin-bottom: 30px;">پژوهش‌ها و مقالات</h2>
-      <div style="font-size: 17.5px; line-height: 1.85; color: #334155;">
-        <p style="direction: ltr; text-align: left; margin-bottom: 25px;">
-          <strong>Navigating Digital Disconnection: A Quasi-Experimental Evaluation of Systemic Family Therapy for Excessive Screen Time in Iranian Families Post-Pandemic</strong><br>
-          <span style="color: #4f46e5;">DOI: 10.1007/s10615-026-01027-x</span>
-        </p>
+      <!-- تحصیلات -->
+      <div class="card">
+        <h2>تحصیلات و افتخارات</h2>
+        <ul style="font-size: 19.5px; line-height: 2.4; padding-right: 25px;">
+          <li>کارشناسی ارشد مشاوره خانواده، دانشگاه خوارزمی تهران</li>
+          <li>عضو انجمن روان‌شناسی آمریکا (APA)</li>
+          <li>عضو بنیاد ملی نخبگان</li>
+          <li>داور مجله Current Psychology (JCR Q1)</li>
+          <li>رتبه اول شعر در دو دوره جشنواره فرهنگی کشوری</li>
+        </ul>
+      </div>
+
+      <!-- پژوهش‌ها -->
+      <div class="card">
+        <h2>پژوهش‌ها و مقالات</h2>
+        <div style="font-size: 17.5px; line-height: 1.9;">
+          <p style="direction: ltr; text-align: left; margin-bottom: 25px;">
+            <strong>Navigating Digital Disconnection: A Quasi-Experimental Evaluation of Systemic Family Therapy for Excessive Screen Time in Iranian Families Post-Pandemic</strong><br>
+            <span style="color: #4f46e5;">DOI: 10.1007/s10615-026-01027-x</span>
+          </p>
+          <p style="direction: ltr; text-align: left; margin-bottom: 25px;">
+            <strong>An Analysis of Women's Lived Experience of Their Husbands' Emotional Support in Crisis Situations</strong><br>
+            <span style="color: #4f46e5;">DOI: 10.1080/01926187.2026.2631372</span>
+          </p>
+          <p style="direction: ltr; text-align: left; margin-bottom: 15px;">Exploring the Role of Birth Order in Family Conflict Resolution through Qualitative Narrative Analysis</p>
+          <p style="direction: ltr; text-align: left;">Qualitative Study of Factors Affecting Marital Satisfaction in Iranian Families</p>
+        </div>
+      </div>
+
+      <!-- تماس -->
+      <div class="card" style="text-align: center;">
+        <h2>اطلاعات تماس</h2>
+        <div style="font-size: 19.5px; line-height: 2.1;">
+          <p style="margin: 15px 0;"><strong>مرکز مشاوره راستین</strong></p>
+          <p style="margin: 12px 0;">قزوین، فردوسی جنوبی، روبه‌روی خیابان شهرداری، پلاک ۸۶، طبقه اول، واحد ۴</p>
+          <p style="margin: 12px 0;">تلفن ثابت: <strong>۰۲۸۳۳۲۲۳۸۱۴</strong></p>
+          <p style="margin: 12px 0;">همراه: <strong>۰۹۳۰۴۲۴۴۸۲۹</strong></p>
+          <p style="margin: 20px 0; color: #4338ca;">mohaddesehalimoradi200088@gmail.com</p>
+        </div>
         
-        <p style="direction: ltr; text-align: left; margin-bottom: 25px;">
-          <strong>An Analysis of Women's Lived Experience of Their Husbands' Emotional Support in Crisis Situations</strong><br>
-          <span style="color: #4f46e5;">DOI: 10.1080/01926187.2026.2631372</span>
-        </p>
-        
-        <p style="direction: ltr; text-align: left; margin-bottom: 15px;">Exploring the Role of Birth Order in Family Conflict Resolution through Qualitative Narrative Analysis</p>
-        
-        <p style="direction: ltr; text-align: left;">Qualitative Study of Factors Affecting Marital Satisfaction in Iranian Families</p>
+        <a href="https://www.linkedin.com/in/mohaddeseh-alimoradi-otaghvar-182070348" target="_blank" 
+           style="display: inline-block; margin-top: 20px; color: #4338ca; font-weight: bold; border: 2px solid #6366f1; padding: 14px 32px; border-radius: 50px; text-decoration: none;">
+          LinkedIn Profile →
+        </a>
       </div>
-    </div>
-
-    <!-- اطلاعات تماس -->
-    <div class="card" style="text-align: center;">
-      <h2 style="font-size: 29px; margin-bottom: 30px;">اطلاعات تماس</h2>
-      <div style="font-size: 19.5px; line-height: 2.1;">
-        <p style="margin: 12px 0;"><strong>مرکز مشاوره راستین</strong></p>
-        <p style="margin: 12px 0;">قزوین، فردوسی جنوبی، روبه‌روی خیابان شهرداری، پلاک ۸۶، طبقه اول، واحد ۴</p>
-        <p style="margin: 12px 0;">تلفن ثابت: <strong>۰۲۸۳۳۲۲۳۸۱۴</strong></p>
-        <p style="margin: 12px 0;">همراه: <strong>۰۹۳۰۴۲۴۴۸۲۹</strong></p>
-        <p style="margin: 18px 0; color: #4338ca;">mohaddesehalimoradi200088@gmail.com</p>
-      </div>
-      
-      <a href="https://www.linkedin.com/in/mohaddeseh-alimoradi-otaghvar-182070348" target="_blank" 
-         style="display: inline-block; margin-top: 25px; color: #4338ca; text-decoration: none; font-weight: bold; border: 2px solid #6366f1; padding: 12px 28px; border-radius: 50px;">
-        LinkedIn Profile →
-      </a>
     </div>
 
   </div>
+
+  <script>
+    function switchLang(lang) {
+      alert("نسخه انگلیسی به زودی اضافه خواهد شد. فعلاً فقط فارسی فعال است.");
+      // در آینده می‌توانید نسخه انگلیسی کامل اضافه کنید
+    }
+  </script>
 </body>
 </html>
