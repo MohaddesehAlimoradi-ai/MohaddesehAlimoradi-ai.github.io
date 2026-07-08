@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محدثه علی‌مرادی اطاقور | مشاور خانواده و روانشناس</title>
+    <title>محدثه علی‌مرادی اطاقور | مشاور خانواده</title>
     <style>
         :root {
-            --primary: #2c3e50;
-            --accent: #e74c3c;
-            --light: #f8f9fa;
+            --primary: #0f766e;
+            --primary-light: #14b8a6;
+            --primary-dark: #0f766e;
+            --accent: #5eead4;
+            --light: #f0fdfa;
         }
         
         body {
             font-family: 'Tahoma', 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f0 100%);
+            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
             color: #333;
             line-height: 1.7;
         }
@@ -24,86 +26,77 @@
             max-width: 1000px;
             margin: 40px auto;
             background: white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(15, 118, 110, 0.15);
+            border-radius: 20px;
             overflow: hidden;
         }
 
         .header {
-            background: linear-gradient(135deg, var(--primary), #34495e);
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
-            padding: 50px 40px;
+            padding: 60px 40px;
             text-align: center;
+        }
+
+        .header h1 {
+            margin: 0 0 12px 0;
+            font-size: 2.5em;
         }
 
         .language-switch {
             text-align: center;
-            padding: 15px 0;
-            background: #f8f9fa;
-            border-bottom: 1px solid #eee;
+            padding: 18px 0;
+            background: #f0fdfa;
+            border-bottom: 1px solid #e0f2f1;
         }
 
         .language-switch button {
-            padding: 12px 30px;
-            margin: 0 8px;
-            font-size: 16px;
+            padding: 12px 32px;
+            margin: 0 10px;
+            font-size: 16.5px;
             border: none;
             border-radius: 30px;
             cursor: pointer;
             transition: all 0.3s;
+            font-weight: 500;
         }
 
         .language-switch button.active {
-            background: var(--accent);
+            background: var(--primary-light);
             color: white;
-            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+            box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4);
         }
 
         .content {
-            padding: 50px 60px;
-        }
-
-        h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.4em;
-        }
-
-        .title {
-            font-size: 1.35em;
-            opacity: 0.95;
-            margin-bottom: 30px;
+            padding: 55px 65px;
         }
 
         h2 {
             color: var(--primary);
             border-bottom: 3px solid var(--accent);
-            padding-bottom: 10px;
-            margin-top: 40px;
+            padding-bottom: 12px;
+            margin-top: 45px;
         }
 
         ul {
-            padding-right: 20px;
+            padding-right: 25px;
         }
 
         li {
-            margin: 10px 0;
-            font-size: 1.05em;
+            margin: 11px 0;
+            font-size: 1.06em;
         }
 
         .contact-info {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 10px;
-            margin-top: 30px;
+            background: var(--light);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 35px;
+            border: 1px solid #ccfbf1;
         }
 
         a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+            color: var(--primary-light);
         }
     </style>
 </head>
@@ -111,10 +104,10 @@
 
 <div class="container">
 
-    <!-- هدر -->
-    <div class="header">
-        <h1>محدثه علی‌مرادی اطاقور</h1>
-        <p class="title">مشاور خانواده، روان‌شناس و پژوهشگر</p>
+    <!-- هدر با قابلیت تغییر زبان -->
+    <div class="header" id="header">
+        <h1 id="header-name">محدثه علی‌مرادی اطاقور</h1>
+        <p id="header-title" class="title" style="font-size:1.4em; margin:10px 0 0 0;">مشاور خانواده، روان‌شناس و پژوهشگر</p>
     </div>
 
     <!-- سوییچ زبان -->
@@ -258,18 +251,26 @@
         const enContent = document.getElementById('en-content');
         const btnFa = document.getElementById('btn-fa');
         const btnEn = document.getElementById('btn-en');
+        const headerName = document.getElementById('header-name');
+        const headerTitle = document.getElementById('header-title');
 
         if (lang === 'fa') {
             faContent.style.display = 'block';
             enContent.style.display = 'none';
             btnFa.classList.add('active');
             btnEn.classList.remove('active');
+            
+            headerName.textContent = "محدثه علی‌مرادی اطاقور";
+            headerTitle.textContent = "مشاور خانواده، روان‌شناس و پژوهشگر";
             document.documentElement.dir = 'rtl';
         } else {
             faContent.style.display = 'none';
             enContent.style.display = 'block';
             btnFa.classList.remove('active');
             btnEn.classList.add('active');
+            
+            headerName.textContent = "Mohaddeseh Alimoradi Otaghvar";
+            headerTitle.textContent = "Family Counselor | Psychologist | Researcher";
             document.documentElement.dir = 'ltr';
         }
     }
