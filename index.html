@@ -34,13 +34,26 @@
         .header {
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
-            padding: 60px 40px;
+            padding: 50px 40px 45px;
             text-align: center;
+        }
+
+        .profile-img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            margin-bottom: 22px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .header h1 {
             margin: 0 0 12px 0;
-            font-size: 2.5em;
+            font-size: 2.4em;
         }
 
         .language-switch {
@@ -97,6 +110,20 @@
 
         a {
             color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .doi-link {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .doi-link:hover {
+            color: var(--primary-light);
         }
     </style>
 </head>
@@ -104,10 +131,11 @@
 
 <div class="container">
 
-    <!-- هدر با قابلیت تغییر زبان -->
+    <!-- هدر با عکس پروفایل -->
     <div class="header" id="header">
+        <img src="profile.jpg" alt="محدثه علی‌مرادی اطاقور" class="profile-img">
         <h1 id="header-name">محدثه علی‌مرادی اطاقور</h1>
-        <p id="header-title" class="title" style="font-size:1.4em; margin:10px 0 0 0;">مشاور خانواده، روان‌شناس و پژوهشگر</p>
+        <p id="header-title" class="title" style="font-size:1.35em; margin:10px 0 0 0;">مشاور خانواده، روان‌شناس و پژوهشگر</p>
     </div>
 
     <!-- سوییچ زبان -->
@@ -163,8 +191,14 @@
 
         <h2>پژوهش‌ها و مقالات</h2>
         <ul>
-            <li><strong>Navigating Digital Disconnection: A Quasi-Experimental Evaluation of Systemic Family Therapy for Excessive Screen Time in Iranian Families Post-Pandemic</strong><br>DOI: 10.1007/s10615-026-01027-x</li>
-            <li><strong>An Analysis of Women's Lived Experience of Their Husbands' Emotional Support in Crisis Situations</strong><br>DOI: 10.1080/01926187.2026.2631372</li>
+            <li>
+                <strong>Navigating Digital Disconnection: A Quasi-Experimental Evaluation of Systemic Family Therapy for Excessive Screen Time in Iranian Families Post-Pandemic</strong><br>
+                DOI: <a href="https://doi.org/10.1007/s10615-026-01027-x" target="_blank" class="doi-link">10.1007/s10615-026-01027-x</a>
+            </li>
+            <li>
+                <strong>An Analysis of Women's Lived Experience of Their Husbands' Emotional Support in Crisis Situations</strong><br>
+                DOI: <a href="https://doi.org/10.1080/01926187.2026.2631372" target="_blank" class="doi-link">10.1080/01926187.2026.2631372</a>
+            </li>
             <li><strong>Exploring the Role of Birth Order in Family Conflict Resolution through Qualitative Narrative Analysis</strong></li>
             <li><strong>Qualitative Study of Factors Affecting Marital Satisfaction in Iranian Families</strong></li>
         </ul>
@@ -227,8 +261,14 @@
 
         <h2>Research & Publications</h2>
         <ul>
-            <li><strong>Navigating Digital Disconnection: A Quasi-Experimental Evaluation of Systemic Family Therapy for Excessive Screen Time in Iranian Families Post-Pandemic</strong><br>DOI: 10.1007/s10615-026-01027-x</li>
-            <li><strong>An Analysis of Women's Lived Experience of Their Husbands' Emotional Support in Crisis Situations</strong><br>DOI: 10.1080/01926187.2026.2631372</li>
+            <li>
+                <strong>Navigating Digital Disconnection: A Quasi-Experimental Evaluation of Systemic Family Therapy for Excessive Screen Time in Iranian Families Post-Pandemic</strong><br>
+                DOI: <a href="https://doi.org/10.1007/s10615-026-01027-x" target="_blank" class="doi-link">10.1007/s10615-026-01027-x</a>
+            </li>
+            <li>
+                <strong>An Analysis of Women's Lived Experience of Their Husbands' Emotional Support in Crisis Situations</strong><br>
+                DOI: <a href="https://doi.org/10.1080/01926187.2026.2631372" target="_blank" class="doi-link">10.1080/01926187.2026.2631372</a>
+            </li>
             <li><strong>Exploring the Role of Birth Order in Family Conflict Resolution through Qualitative Narrative Analysis</strong></li>
             <li><strong>Qualitative Study of Factors Affecting Marital Satisfaction in Iranian Families</strong></li>
         </ul>
