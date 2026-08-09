@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت‌نام ریتریت ذهن‌آگاهی | محدثه علی‌مرادی اطاقور</title>
+    <style>
+        :root {
+            --primary: #0f766e;
+            --primary-light: #14b8a6;
+            --accent: #5eead4;
+            --light: #f0fdfa;
+        }
+        
+        body {
+            font-family: 'Tahoma', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 15px 35px rgba(15, 118, 110, 0.15);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 35px 25px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.6em;
+        }
+
+        .content {
+            padding: 35px 40px 45px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1.5px solid #99f6e4;
+            border-radius: 10px;
+            font-size: 1em;
+            font-family: inherit;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary-light);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .radio-group {
+            margin-bottom: 20px;
+        }
+
+        .radio-group label {
+            display: inline-block;
+            margin-left: 20px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-light);
+        }
+
+        .note {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 25px;
+            font-size: 0.95em;
+            color: #555;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                padding: 25px 20px 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🌿 فرم ثبت‌نام ریتریت ذهن‌آگاهی</h1>
+    </div>
+
+    <div class="content">
+
+        <a href="retreat.html" class="back-link">← بازگشت به توضیحات دوره</a>
+
+        <form id="retreatForm" onsubmit="submitForm(event)">
+            
+            <label for="fullname">نام و نام خانوادگی *</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="نام کامل خود را وارد کنید">
+
+            <label for="mobile">شماره موبایل *</label>
+            <input type="tel" id="mobile" name="mobile" required placeholder="۰۹۱۲xxxxxxx">
+
+            <label for="job">شغل / رشته</label>
+            <input type="text" id="job" name="job" placeholder="شغل یا رشته تحصیلی">
+
+            <label>تجربه قبلی مدیتیشن:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="experience" value="بله" required> بله</label>
+                <label><input type="radio" name="experience" value="خیر"> خیر</label>
+            </div>
+
+            <label for="goal">هدف یا انتظار شما از شرکت در ریتریت</label>
+            <textarea id="goal" name="goal" placeholder="لطفاً انتظارات و اهداف خود را بنویسید..."></textarea>
+
+            <button type="submit" class="btn-submit">ثبت درخواست</button>
+        </form>
+
+        <div class="note">
+            پس از ثبت درخواست، از طریق واتساپ یا تماس با شما هماهنگ خواهیم کرد.
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function submitForm(e) {
+        e.preventDefault();
+
+        const fullname = document.getElementById('fullname').value.trim();
+        const mobile = document.getElementById('mobile').value.trim();
+        const job = document.getElementById('job').value.trim() || 'ذکر نشده';
+        const experience = document.querySelector('input[name="experience"]:checked')?.value || 'ذکر نشده';
+        const goal = document.getElementById('goal').value.trim() || 'ذکر نشده';
+
+        const message = 
+`🌿 درخواست ثبت‌نام ریتریت ذهن‌آگاهی
+
+👤 نام: ${fullname}
+📱 موبایل: ${mobile}
+💼 شغل/رشته: ${job}
+🧘 تجربه مدیتیشن: ${experience}
+🎯 هدف/انتظار: ${goal}`;
+
+        // شماره واتساپ (با کد کشور)
+        const phone = "989304244829";
+        const url = `https://wa.me/\( {phone}?text= \){encodeURIComponent(message)}`;
+        
+        window.open(url, '_blank');
+    }
+</script>
+
+</body>
+</html>
